@@ -1,0 +1,41 @@
+.epastebin_container
+{
+    width: 500px;
+}
+form.epastebin_container input[type="text"]
+{
+    width: 100%;
+}
+form.epastebin_container textarea
+{
+    width: 100%;
+    height: 310px;;
+}
+.epastebin_controls
+{
+    width: 100%;
+    height: 10%;
+}
+.epastebin_control_right
+{
+    float: right;
+    padding: 0.5em;
+}
+.epastebin_control_left
+{
+    float: left;
+    padding: 0.5em;
+}
+div.epastebin_controls input[type="submit"]
+{
+    bottom: 0;
+    height: 100%;
+}
+div.epastebin_return
+{
+    height: 2em;
+    background-color: #66E066;
+    width: 90%;
+    border: solid 1px #52B352;
+    padding: 0.5em;
+}

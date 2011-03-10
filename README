@@ -1,0 +1,77 @@
+EPastebin
+---------
+Version: 0.2
+Author: Dimitrios Meggidis
+Repository: [dmtrs/etbar](http://www.github.com/dmtrs/EPastebin)
+
+###Description
+
+A simple class to start with yii framework extensions. This extension
+will render a pastebin submit form to your view.
+
+###Requirements
+
+First of all, you must register to [Pastebin.com](http://www.pastebin.com)
+to get a developer key.
+
+###Implement
+
+Add extension to the config file (config/main.php):
+
+~~~
+[php]
+    'imports'=>array(
+        ...
+        'application.extensions.EPastebin.*'
+        ...
+~~~        
+
+In controller add: 
+
+~~~
+[php]
+    public function actions()
+	{
+		return array(
+            ....
+            'epastebin'=>array(
+                'class'=>'CPastebinAction'
+            ),
+            ....
+		);
+	}
+~~~
+In view add:
+
+Minimal options:
+
+~~~
+[php]
+
+    $this->widget('EPastebin', array(
+        "loginKey"=>"Your developer key from pastebin.com"));
+~~~
+
+All available options:
+
+~~~
+[php]
+
+    $this->widget('EPastebin', array(
+        "loginKey"=>"Your developer key from pastebin.com",       
+        // The view that contains the form under extension/EPastebin/views/
+        "form"=>"_form", 
+        "default"=>array(
+            "format"=>"php", //Default for format selection
+            "expire"=>"10M"  //Default for expire seltion
+        ),
+    ));
+~~~
+
+##TODO 
+
+~~~~
+- better messages to be returned
+- create hide button on flash message
+- css of flash message to overlay the other divs.
+~~~

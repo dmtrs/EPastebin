@@ -62,8 +62,8 @@ All available options:
         // The view that contains the form under extension/EPastebin/views/
         "form"=>"_form", 
         "default"=>array(
-            "format"=>"php", //Default for format selection
-            "expire"=>"10M"  //Default for expire seltion
+            "format"=>"php", //Default for format selection check options.php
+            "expire"=>"10M"  //Default for expire seltion check options.php
         ),
     ));
 ~~~

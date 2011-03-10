@@ -1,5 +1,6 @@
 <?php
 return array(
+"format"=>array(
 '4cs'=>'4CS',
 '6502acme'=>'6502',
 '6502kickass'=>'6502',
@@ -189,4 +190,12 @@ return array(
 'xpp'=>'XPP',
 'z80'=>'Z80',
 'zxbasic'=>'ZXBasic',
+),
+"expireDate"=>array(
+        "N"=>"Never",
+        "10M"=>"10 Minutes",
+        "1H"=>"1 Hour",
+        "1D"=>"1 Day",
+        "1M"=>"1 Month"
+),
 );

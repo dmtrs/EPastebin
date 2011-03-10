@@ -12,15 +12,9 @@ class EPastebin extends CWidget
 
     private $css = null;
     private $js = null;
-    private $format = array();
-    private $expireDate = array(
-        "N"=>"Never",
-        "10M"=>"10 Minutes",
-        "1H"=>"1 Hour",
-        "1D"=>"1 Day",
-        "1M"=>"1 Month"
-    );
 
+    private $options = array();
+    
     public $loginKey = "";
     public $default = array(
         "format"=>"text",
@@ -57,15 +51,15 @@ class EPastebin extends CWidget
     public function init()
     {    
         $this->registerScripts();
-        $this->format = require_once(dirname(__FILE__).DIRECTORY_SEPARATOR."format.php");
+        $this->options = require_once(dirname(__FILE__).DIRECTORY_SEPARATOR."options.php");
         parent::init();
     }
     public function run()
     {
         $this->render($this->form, array(
-            'format'=>$this->format,
+            'format'=>$this->options["format"],
             'key'=>$this->loginKey,
-            'expireDate'=>$this->expireDate,
+            'expireDate'=>$this->options["expireDate"],
             'default'=>$this->default,
         ));
     }
